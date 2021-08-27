@@ -1,1 +1,1 @@
-web: cmd/fibonacci
+web: bin/fibonacci
