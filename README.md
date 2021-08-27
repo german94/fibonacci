@@ -12,3 +12,7 @@ This is basically an implementation of the fibonacci sequence which allows arbit
 
 In order to compile we can just type `make` and `make run`. Then the server will be accepting GET requests (on port 8080) to the / endpoint with the corresponding n parameter.
 To run the tests we just need to type `make test`.
+
+## Deployment
+
+This code was deployed to heroku as well and the URL of the app is: https://fib-challenge-rollee.herokuapp.com/ Note that this is using the heroku free tier, so the app sleeps if it is not used for some time and it can be kind of slow to start up again. Once it's started it should work normally.
