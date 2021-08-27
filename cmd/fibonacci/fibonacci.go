@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -12,5 +13,9 @@ func main() {
 func startServer() {
 	http.HandleFunc("/", calcHandler)
 	fmt.Println("Server started at port 8080")
-	http.ListenAndServe(":8080", nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Default port if not specified
+	}
+	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }
